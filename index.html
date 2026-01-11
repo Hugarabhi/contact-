@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>GAANYOGI | Elite Travel Concierge</title>
+    <title>GAANYOGI | tours and travels </title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -146,6 +146,51 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
         }
+
+        /* Logo styling */
+        .logo-img {
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Table styling */
+        .price-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .price-table th {
+            background: linear-gradient(135deg, var(--electric-blue) 0%, var(--tea-green) 100%);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 16px;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+        
+        .price-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(0, 168, 232, 0.1);
+            font-size: 0.875rem;
+        }
+        
+        .price-table tr:hover {
+            background-color: rgba(0, 168, 232, 0.03);
+        }
+        
+        .price-table .highlight {
+            background-color: rgba(212, 224, 155, 0.15);
+            font-weight: 600;
+        }
     </style>
 
     <!-- Tailwind Configuration -->
@@ -186,13 +231,13 @@
     <!-- Navigation -->
     <nav class="glass sticky top-0 z-50 shadow-sm animate-fade-in">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2 cursor-pointer" onclick="router.navigate('home')">
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-electric to-teagreen flex items-center justify-center text-white font-serif text-lg shadow-lg">
-                    G
-                </div>
+            <div class="flex items-center gap-3 cursor-pointer" onclick="router.navigate('home')">
+                <img src="https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT" 
+                     alt="GAANYOGI Logo" 
+                     class="logo-img w-12 h-12 object-contain">
                 <div>
-                    <h1 class="text-lg font-serif font-bold tracking-widest text-midnight">GAANYOGI</h1>
-                    <p class="text-[8px] text-electric font-bold uppercase tracking-[0.2em]">Elite Travel Concierge</p>
+                    <h1 class="text-xl font-serif font-bold tracking-widest text-midnight">GAANYOGI</h1>
+                    <p class="text-[10px] text-electric font-bold uppercase tracking-[0.2em]">tours and travels </p>
                 </div>
             </div>
             
@@ -208,7 +253,7 @@
                     <i class="fa-solid fa-user mr-1"></i> Guest
                 </div>
                 <button onclick="router.navigate('rides')" class="hidden md:block gradient-sunset text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:opacity-90 transition shadow-lg mobile-tap">
-                    <i class="fa-solid fa-car-side mr-2"></i>Chauffeur
+                    <i class="fa-solid fa-car-side mr-2"></i>book ride
                 </button>
                 <button onclick="toggleMobileMenu()" class="md:hidden text-midnight text-xl p-2 mobile-tap">
                     <i class="fa-solid fa-bars"></i>
@@ -240,16 +285,21 @@
     <footer class="bg-midnight text-white py-10 mt-20">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-                <h3 class="font-serif text-xl font-bold mb-4 text-teagreen">GAANYOGI</h3>
-                <p class="text-gray-300 text-sm leading-relaxed">Secure Journeys, Eternal Memories. Premium travel experiences across India's finest landscapes.</p>
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://drive.google.com/file/d/1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT/view?usp=sharing" 
+                         alt="GAANYOGI Logo" 
+                         class="logo-img w-10 h-10 object-contain">
+                    <h3 class="font-serif text-xl font-bold text-teagreen">GAANYOGI</h3>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed">Comfort • Safety • Reliable Journeys</p>
             </div>
             <div>
                 <h3 class="font-serif text-lg font-bold mb-4 text-white">Concierge Desk</h3>
                 <p class="text-gray-300 text-sm mb-3 flex items-center">
-                    <i class="fa-brands fa-whatsapp mr-3 text-teagreen"></i>+91 8080062440
+                    <i class="fa-brands fa-whatsapp mr-3 text-teagreen"></i>+91 7743805933
                 </p>
                 <p class="text-gray-300 text-sm flex items-center">
-                    <i class="fa-solid fa-envelope mr-3 text-teagreen"></i>bookings@gaanyogi.in
+                    <i class="fa-solid fa-envelope mr-3 text-teagreen"></i>gaanyogitours@gmail.com
                 </p>
             </div>
             <div>
@@ -262,7 +312,7 @@
             </div>
         </div>
         <div class="text-center text-gray-500 text-[10px] uppercase tracking-widest mt-8 border-t border-white/10 pt-6">
-            &copy; 2026 GAANYOGI Elite Travel. All rights reserved.
+            &copy; 2026 GAANYOGI | tours and travels  | all are reserved by { abhiwebdesign.great-site.net }
         </div>
     </footer>
 
@@ -275,7 +325,7 @@
                         <i class="fa-solid fa-robot"></i>
                     </div>
                     <div>
-                        <p class="font-bold text-sm font-serif">Yogi AI</p>
+                        <p class="font-bold text-sm font-serif">gaanYogi AI</p>
                         <p class="text-[10px] opacity-90 uppercase">Travel Concierge</p>
                     </div>
                 </div>
@@ -286,7 +336,7 @@
             <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-cream text-sm space-y-3 custom-scrollbar hide-scrollbar">
                 <div class="flex justify-start animate-slide-in">
                     <div class="bg-white p-3 rounded-2xl rounded-tl-none border border-electric/20 max-w-[85%] text-midnight shadow-sm">
-                        Namaste! I am Yogi, your AI travel concierge. How can I assist with your journey today?
+                        Namaste! I am gaanYogi, your AI travel concierge. How can I assist with your journey today?
                     </div>
                 </div>
             </div>
@@ -316,7 +366,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, limit, onSnapshot, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, limit, onSnapshot, doc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
         // Firebase Configuration
         const firebaseConfig = {
@@ -351,23 +401,89 @@
 
         // Data
         const RIDE_OFFERS = [
-            { id: 'off1', from: 'Mumbai Airport', to: 'Lonavala', price: 2999, img: 'https://images.unsplash.com/photo-1596739956461-8f5539d89953?q=80&w=400&auto=format&fit=crop', vehicle: 'Sedan Prime', duration: '2h 30m' },
-            { id: 'off2', from: 'Pune', to: 'Shirdi', price: 3499, img: 'https://images.unsplash.com/photo-1563293887-827c7d1e8476?q=80&w=400&auto=format&fit=crop', vehicle: 'SUV Comfort', duration: '3h 15m' },
-            { id: 'off3', from: 'Bangalore', to: 'Mysore', price: 3999, img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=400&auto=format&fit=crop', vehicle: 'Innova Crysta', duration: '3h' },
-            { id: 'off4', from: 'Mumbai', to: 'Pune', price: 2499, img: 'https://images.unsplash.com/photo-1566552881560-0be862a7c445?q=80&w=400&auto=format&fit=crop', vehicle: 'Sedan Prime', duration: '2h 45m' }
+            { 
+                id: 'off1', 
+                from: 'Solapur', 
+                to: 'Haidra (Akkalkot)', 
+                price: 1500, 
+                distance: 70+,
+                img: 'https://images.unsplash.com/photo-1596739956461-8f5539d89953?q=80&w=400&auto=format&fit=crop', 
+                vehicle: 'Cruiser ×16', 
+                duration: '3h'
+            },
+            { 
+                id: 'off2', 
+                from: 'Solapur', 
+                to: 'Akkalkot Center', 
+                price: 1052, 
+                distance: 38.5,
+                img: 'https://images.unsplash.com/photo-1563293887-827c7d1e8476?q=80&w=400&auto=format&fit=crop', 
+                vehicle: 'Cruiser ×16', 
+                duration: '1h'
+            },
+            { 
+                id: 'off3', 
+                from: 'Mumbai', 
+                to: 'Akkalkot', 
+                price: 6582, 
+                distance: 443,
+                img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=400&auto=format&fit=crop', 
+                vehicle: 'Cruiser ×16', 
+                duration: '8h 30m'
+            },
+            { 
+                id: 'off4', 
+                from: 'Hyderabad', 
+                to: 'Akkalkot', 
+                price: 5000, 
+                distance: 293,
+                img: 'https://images.unsplash.com/photo-1566552881560-0be862a7c445?q=80&w=400&auto=format&fit=crop', 
+                vehicle: 'Cruiser ×16', 
+                duration: '5h 52m'
+            },
+            { 
+                id: 'off5', 
+                from: 'Solapur', 
+                to: 'Tuljapur', 
+                price: 1100, 
+                distance: 46.5,
+                img: 'https://images.unsplash.com/photo-1529255484355-cb73c33c04bb?q=80&w=400&auto=format&fit=crop', 
+                vehicle: 'Cruiser ×16', 
+                duration: '1h 15m'
+            },
+            { 
+                id: 'off6', 
+                from: 'Solapur', 
+                to: 'Pandharpur', 
+                price: 1424, 
+                distance: 89,
+                img: 'https://images.unsplash.com/photo-1582555490422-9252c7b20536?q=80&w=400&auto=format&fit=crop', 
+                vehicle: 'Cruiser ×16', 
+                duration: '2h'
+            },
+            { 
+                id: 'off7', 
+                from: 'Solapur', 
+                to: 'Lonavala', 
+                price: 5096, 
+                distance: 318.5,
+                img: 'https://images.unsplash.com/photo-1571406452293-c9183b38148b?q=80&w=400&auto=format&fit=crop', 
+                vehicle: 'Cruiser ×16', 
+                duration: '6h 30m'
+            }
         ];
 
         const TOURS = [
-            { id: 't001', title: 'Mystical Hampi', region: 'Karnataka', duration: '3 Days', price: 18500, rating: 4.8, image: 'https://images.unsplash.com/photo-1582555490422-9252c7b20536?q=80&w=400&auto=format&fit=crop', desc: 'Ancient ruins of Vijayanagara empire.', highlights: ['Coracle Ride', 'Sunset Point', 'Cave Temples'] },
+            { id: 't001', title: 'Mystical Hampi', region: 'Karnataka', duration: '3 Days', price: 18500, rating: 4.8, image: 'https://unsplash.com/photos/brown-concrete-building-during-daytime-9eZ7rB42xow', desc: 'Ancient ruins of Vijayanagara empire.', highlights: ['Coracle Ride', 'Sunset Point', 'Cave Temples'] },
             { id: 't002', title: 'Konkan Bliss', region: 'Maharashtra', duration: '4 Days', price: 22000, rating: 4.9, image: 'https://images.unsplash.com/photo-1571406452293-c9183b38148b?q=80&w=400&auto=format&fit=crop', desc: 'Pristine beaches and scuba diving.', highlights: ['Scuba Diving', 'Fort Visit', 'Beach Bonfire'] },
             { id: 't003', title: 'Coorg Hills', region: 'Karnataka', duration: '3 Days', price: 15500, rating: 4.7, image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=400&auto=format&fit=crop', desc: 'Coffee plantations and misty hills.', highlights: ['Coffee Tasting', 'Abbey Falls', 'Elephants'] },
             { id: 't004', title: 'Kerala Backwaters', region: 'Kerala', duration: '5 Days', price: 28500, rating: 4.9, image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=400&auto=format&fit=crop', desc: 'Serene houseboat cruise.', highlights: ['Houseboat Stay', 'Ayurvedic Spa', 'Kathakali Show'] }
         ];
 
         const VEHICLES = [
-            { id: 'v1', name: 'Gaanyogi Prime', type: 'Sedan (AC)', seats: 4, rate: 14, img: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/128413/ertiga-exterior-right-front-three-quarter-5.jpeg?isig=0', color: 'electric' },
-            { id: 'v2', name: 'Gaanyogi XL', type: 'SUV (AC)', seats: 6, rate: 18, img: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/144681/trax-cruiser-exterior-right-front-three-quarter.jpeg?isig=0', color: 'sunset' },
-            { id: 'v3', name: 'Gaanyogi Lux', type: 'Luxury', seats: 4, rate: 35, img: 'https://5.imimg.com/data5/SELLER/Default/2022/9/MQ/OA/WO/3622432/force-trax-cruiser-12-str-ac-500x500.jpg', color: 'melon' }
+            { id: 'v1', name: 'Gaanyogi Car', type: 'Car (AC)', seats: 4, rate: 14, img: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/135589/trax-cruiser-exterior-right-front-three-quarter-3.png?isig=0&q=80', color: 'electric' },
+            { id: 'v2', name: 'Gaanyogi Cruiser', type: 'Cruiser (AC)', seats: 6, rate: 16, img: 'https://imgd.aeplcdn.com/642x336/n/c6es93a_1572125.jpg?q=80', color: 'sunset' },
+            { id: 'v3', name: 'Gaanyogi Lux', type: 'Luxury', seats: 4, rate: 35, img: 'https://imgd.aeplcdn.com/642x336/n/c6es93a_1572125.jpg?q=80', color: 'melon' }
         ];
 
         // Authentication
@@ -412,21 +528,26 @@
                         <img src="https://images.unsplash.com/photo-1545232979-8bf68ee0523f?q=80&w=1600" 
                              class="w-full h-full object-cover" 
                              alt="Luxury Travel">
-                        <div class="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-midnight/70 via-midnight/60 to-transparent"></div>
                     </div>
                     
                     <div class="relative h-full flex flex-col justify-center px-4 md:px-24">
                         <div class="max-w-2xl animate-slide-in">
-                            <span class="text-electric font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Premium Chauffeur Services</span>
-                            <h1 class="font-serif text-4xl md:text-6xl text-midnight mb-4 leading-tight">Elevate Your <span class="text-sunset italic">Journey.</span></h1>
-                            <p class="text-slate text-lg mb-8 max-w-lg">Experience the finest chauffeur services and curated luxury tours across India.</p>
+                            <div class="flex items-center gap-3 mb-6">
+                                <img src="https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT" 
+                                     alt="GAANYOGI Logo" 
+                                     class="logo-img w-16 h-16 object-contain bg-white/20 backdrop-blur-sm p-2 rounded-xl">
+                                <span class="text-electric font-bold tracking-[0.2em] text-xs uppercase">Premium Chauffeur Services</span>
+                            </div>
+                            <h1 class="font-serif text-4xl md:text-6xl text-white mb-4 leading-tight">Elevate Your <span class="text-teagreen italic">Journey.</span></h1>
+                            <p class="text-white/90 text-lg mb-8 max-w-lg">Experience the finest chauffeur services and curated luxury tours across India.</p>
                             <div class="flex flex-col sm:flex-row gap-4">
                                 <button onclick="router.navigate('rides')" 
                                         class="gradient-sunset text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:opacity-90 transition shadow-lg mobile-tap">
                                     <i class="fa-solid fa-car-side mr-2"></i>Book Chauffeur
                                 </button>
                                 <button onclick="router.navigate('tours')" 
-                                        class="bg-white text-midnight border-2 border-electric/30 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-electric/10 transition mobile-tap">
+                                        class="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white/30 transition mobile-tap">
                                     <i class="fa-solid fa-map-marked-alt mr-2"></i>View Itineraries
                                 </button>
                             </div>
@@ -436,9 +557,9 @@
 
                 <section class="container mx-auto px-4 py-12 -mt-20 relative z-10">
                     <div class="mb-8">
-                        <span class="text-sunset font-bold tracking-[0.2em] text-xs uppercase block mb-2">Limited Time</span>
-                        <h2 class="font-serif text-2xl md:text-3xl text-midnight mb-2">Exclusive Drop Offers</h2>
-                        <p class="text-slate text-sm">Pre-booked routes at fixed prices</p>
+                        <span class="text-sunset font-bold tracking-[0.2em] text-xs uppercase block mb-2">Fixed Rate Services</span>
+                        <h2 class="font-serif text-2xl md:text-3xl text-midnight mb-2">Popular Routes</h2>
+                        <p class="text-slate text-sm">Pre-booked routes at competitive rates</p>
                     </div>
 
                     <div class="flex gap-4 overflow-x-auto pb-6 custom-scrollbar hide-scrollbar px-2">
@@ -447,7 +568,10 @@
                                 <div class="h-40 overflow-hidden relative">
                                     <img src="${offer.img}" class="w-full h-full object-cover">
                                     <div class="absolute top-3 left-3 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-electric">
-                                        <i class="fa-solid fa-clock mr-1"></i>${offer.duration}
+                                        <i class="fa-solid fa-road mr-1"></i>${offer.distance} km
+                                    </div>
+                                    <div class="absolute top-3 right-3 bg-electric text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                                        ${offer.vehicle}
                                     </div>
                                 </div>
                                 <div class="p-5">
@@ -456,13 +580,13 @@
                                             <div class="flex items-center gap-2 text-midnight font-bold text-lg mb-1">
                                                 <span>${offer.from.split(' ')[0]}</span>
                                                 <i class="fa-solid fa-arrow-right text-sunset"></i>
-                                                <span>${offer.to}</span>
+                                                <span>${offer.to.split(' ')[0]}</span>
                                             </div>
-                                            <p class="text-xs text-slate uppercase">${offer.vehicle}</p>
+                                            <p class="text-xs text-slate uppercase">${offer.vehicle} • ${offer.duration}</p>
                                         </div>
                                         <div class="text-right">
-                                            <p class="text-2xl font-serif text-sunset font-bold">₹${offer.price}</p>
-                                            <p class="text-[10px] text-slate line-through">₹${offer.price + 500}</p>
+                                            <p class="text-2xl font-serif text-sunset font-bold">₹${offer.price.toLocaleString()}</p>
+                                            <p class="text-[10px] text-slate">₹${offer.rate || Math.round(offer.price/offer.distance)}/km</p>
                                         </div>
                                     </div>
                                     <button onclick="bookOffer('${offer.id}')" 
@@ -543,6 +667,80 @@
                         </div>
                     </div>
                 </section>
+
+                <section class="bg-gradient-to-br from-electric/5 to-teagreen/5 py-16">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <span class="text-electric font-bold tracking-[0.3em] text-xs uppercase mb-3 block">Transparent Pricing</span>
+                            <h2 class="font-serif text-2xl md:text-3xl text-midnight mb-4">Standard Fare Rates</h2>
+                            <p class="text-slate max-w-2xl mx-auto">Clear and competitive pricing for all routes</p>
+                        </div>
+                        
+                        <div class="overflow-x-auto rounded-2xl shadow-lg">
+                            <table class="price-table w-full">
+                                <thead>
+                                    <tr>
+                                        <th>Destination</th>
+                                        <th>Distance (km)</th>
+                                        <th>Cruiser ×16 (₹)</th>
+                                        <th>Car ×14 (₹)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="font-semibold text-midnight">Solapur → Haidra</td>
+                                        <td class="text-slate">~37 km</td>
+                                        <td class="text-sunset font-bold highlight">592</td>
+                                        <td class="text-electric font-bold">518</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold text-midnight">Solapur → Akkalkot Center</td>
+                                        <td class="text-slate">~35-38 km</td>
+                                        <td class="text-sunset font-bold highlight">560-608</td>
+                                        <td class="text-electric font-bold">490-532</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold text-midnight">Mumbai → Akkalkot</td>
+                                        <td class="text-slate">~267 km</td>
+                                        <td class="text-sunset font-bold highlight">4,272</td>
+                                        <td class="text-electric font-bold">3,738</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold text-midnight">Hyderabad → Akkalkot</td>
+                                        <td class="text-slate">~250 km</td>
+                                        <td class="text-sunset font-bold highlight">4,000</td>
+                                        <td class="text-electric font-bold">3,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold text-midnight">Solapur → Tuljapur</td>
+                                        <td class="text-slate">~40-47 km</td>
+                                        <td class="text-sunset font-bold highlight">640-752</td>
+                                        <td class="text-electric font-bold">560-658</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold text-midnight">Solapur → Pandharpur</td>
+                                        <td class="text-slate">~75-103 km</td>
+                                        <td class="text-sunset font-bold highlight">1,200-1,648</td>
+                                        <td class="text-electric font-bold">1,050-1,442</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold text-midnight">Solapur → Lonavala</td>
+                                        <td class="text-slate">~315-322 km</td>
+                                        <td class="text-sunset font-bold highlight">5,040-5,152</td>
+                                        <td class="text-electric font-bold">4,410-4,508</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="mt-8 text-center">
+                            <p class="text-sm text-slate">
+                                <i class="fa-solid fa-info-circle text-electric mr-2"></i>
+                                Rates are calculated at ₹16/km for Cruiser and ₹14/km for Car. Minimum fare applies.
+                            </p>
+                        </div>
+                    </div>
+                </section>
             `;
         }
 
@@ -555,28 +753,38 @@
                     
                     <div class="relative w-full md:w-[480px] bg-white/95 backdrop-blur-sm z-10 md:ml-4 md:my-4 md:rounded-2xl shadow-2xl border border-electric/20">
                         <div class="gradient-bg p-6 text-white rounded-t-2xl md:rounded-t-2xl">
-                            <h2 class="font-serif text-2xl mb-2">Book Your Journey</h2>
+                            <div class="flex items-center gap-3 mb-2">
+                                <img src="https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT" 
+                                     alt="GAANYOGI Logo" 
+                                     class="logo-img w-10 h-10 object-contain bg-white/20 backdrop-blur-sm p-1 rounded-lg">
+                                <h2 class="font-serif text-2xl">Book Your Journey</h2>
+                            </div>
                             <p class="text-white/90 text-sm">Luxury chauffeur services across India</p>
                         </div>
 
                         <div class="p-4 md:p-6 overflow-y-auto max-h-[70vh] custom-scrollbar">
                             <div class="mb-6">
                                 <h3 class="text-xs font-bold text-sunset uppercase tracking-widest mb-3 flex items-center">
-                                    <i class="fa-solid fa-bolt mr-2"></i>Hot Deals
+                                    <i class="fa-solid fa-bolt mr-2"></i>Popular Routes
                                 </h3>
                                 <div class="flex gap-3 overflow-x-auto pb-4 custom-scrollbar hide-scrollbar">
                                     ${RIDE_OFFERS.map(o => `
                                         <div onclick="bookOffer('${o.id}')" 
-                                             class="min-w-[200px] bg-cream border border-electric/20 p-4 rounded-xl cursor-pointer hover:border-sunset transition mobile-tap">
+                                             class="min-w-[200px] bg-cream border border-electric/20 p-4 rounded-xl cursor-pointer hover:border-sunset transition mobile-tap card-hover">
                                             <div class="flex justify-between items-center mb-2">
                                                 <div>
                                                     <div class="text-sm font-bold text-midnight">${o.to}</div>
                                                     <div class="text-[10px] text-slate">From ${o.from}</div>
                                                 </div>
-                                                <span class="text-sm font-bold text-sunset">₹${o.price}</span>
+                                                <span class="text-sm font-bold text-sunset">₹${o.price.toLocaleString()}</span>
                                             </div>
-                                            <div class="text-[10px] text-slate flex items-center">
-                                                <i class="fa-solid fa-car mr-1"></i> ${o.vehicle}
+                                            <div class="flex justify-between text-[10px] text-slate">
+                                                <span class="flex items-center">
+                                                    <i class="fa-solid fa-road mr-1"></i> ${o.distance} km
+                                                </span>
+                                                <span class="flex items-center">
+                                                    <i class="fa-solid fa-car mr-1"></i> ${o.vehicle}
+                                                </span>
                                             </div>
                                         </div>
                                     `).join('')}
@@ -810,8 +1018,15 @@
                 <div class="max-w-2xl mx-auto py-8 px-4 animate-slide-in">
                     <div class="bg-white p-6 md:p-8 rounded-2xl border border-electric/10 shadow-xl">
                         <div class="mb-8">
-                            <h2 class="font-serif text-2xl md:text-3xl text-midnight mb-2">Complete Your Booking</h2>
-                            <p class="text-slate text-sm">Finalize your reservation for ${tour.title}</p>
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT" 
+                                     alt="GAANYOGI Logo" 
+                                     class="logo-img w-12 h-12 object-contain">
+                                <div>
+                                    <h2 class="font-serif text-2xl md:text-3xl text-midnight mb-2">Complete Your Booking</h2>
+                                    <p class="text-slate text-sm">Finalize your reservation for ${tour.title}</p>
+                                </div>
+                            </div>
                         </div>
                         
                         <form onsubmit="handleTourBookingSubmit(event, '${tour.id}', ${total})" class="space-y-6">
@@ -890,9 +1105,14 @@
             container.innerHTML = `
                 <div class="container mx-auto px-4 py-8 animate-fade-in">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-                        <div>
-                            <h1 class="font-serif text-2xl md:text-3xl text-midnight mb-2">Admin Dashboard</h1>
-                            <p class="text-slate text-sm">Manage bookings and monitor services</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT" 
+                                 alt="GAANYOGI Logo" 
+                                 class="logo-img w-12 h-12 object-contain">
+                            <div>
+                                <h1 class="font-serif text-2xl md:text-3xl text-midnight mb-2">Admin Dashboard</h1>
+                                <p class="text-slate text-sm">Manage bookings and monitor services</p>
+                            </div>
                         </div>
                         <button onclick="state.isAdminVerified = false; router.navigate('admin')" 
                                 class="bg-cream text-slate px-4 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-electric/10 transition mobile-tap">
@@ -942,8 +1162,15 @@
                         <i class="fa-solid fa-xmark text-lg"></i>
                     </button>
                     
-                    <h2 class="text-xl font-serif text-midnight mb-2">Confirm Ride Request</h2>
-                    <p class="text-slate text-sm mb-6">Complete booking details</p>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT" 
+                             alt="GAANYOGI Logo" 
+                             class="logo-img w-10 h-10 object-contain">
+                        <div>
+                            <h2 class="text-xl font-serif text-midnight mb-1">Confirm Ride Request</h2>
+                            <p class="text-slate text-sm">Complete booking details</p>
+                        </div>
+                    </div>
                     
                     <div class="flex items-center gap-4 bg-cream p-4 rounded-xl mb-6 border border-electric/20">
                         <div class="w-20 h-16 rounded-lg overflow-hidden">
@@ -1065,7 +1292,7 @@
 
                 await addDoc(collection(db, 'bookings'), booking);
                 
-                const message = `*New Ride Request - GAANYOGI*\n\nName: ${booking.customerName}\nPhone: ${booking.phone}\nPickup: ${booking.pickup}\nDrop: ${booking.drop}\nVehicle: ${booking.vehicle}\nAmount: ₹${booking.amount}`;
+                const message = `*🚗 GAANYOGI - New Ride Request*\n\n📋 *Booking Details:*\n👤 Name: ${booking.customerName}\n📞 Phone: ${booking.phone}\n👥 Passengers: ${booking.passengers}\n📍 Pickup: ${booking.pickup}\n🎯 Destination: ${booking.drop}\n🚘 Vehicle: ${booking.vehicle}\n📏 Distance: ${booking.distance} km\n💰 Amount: ₹${booking.amount}\n\n*Logo:* https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT`;
 
                 window.open(`https://wa.me/918080062440?text=${encodeURIComponent(message)}`, '_blank');
                 
@@ -1120,7 +1347,7 @@
 
                 await addDoc(collection(db, 'bookings'), booking);
 
-                const message = `*New Tour Booking - GAANYOGI*\n\nTour: ${tour.title}\nCustomer: ${booking.customerName}\nPhone: ${booking.phone}\nAmount Paid: ₹${booking.amount}`;
+                const message = `*🌄 GAANYOGI - New Tour Booking*\n\n📋 *Booking Details:*\n🏞️ Tour: ${tour.title}\n👤 Customer: ${booking.customerName}\n📞 Phone: ${booking.phone}\n💰 Amount Paid: ₹${booking.amount}\n💳 Payment Method: ${booking.paymentMethod}\n\n*Logo:* https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT`;
 
                 window.open(`https://wa.me/918080062440?text=${encodeURIComponent(message)}`, '_blank');
                 
@@ -1166,20 +1393,75 @@
             }
         }
 
-        async function updateBookingStatus(bookingId, status) {
-            if (!confirm(`Mark booking as ${status}?`)) return;
-            
-            try {
-                const bookingRef = doc(db, 'bookings', bookingId);
-                await updateDoc(bookingRef, {
-                    status: status,
-                    updatedAt: serverTimestamp()
-                });
+        async function updateBookingStatus(bookingId, status, bookingData) {
+            if (status === 'CONFIRMED') {
+                const logoUrl = "https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT";
+                const confirmationMessage = `*✨ GAANYOGI - Booking Confirmed!*\n\n🎉 *Dear ${bookingData.customerName},*\n\nYour booking has been successfully confirmed!\n\n📋 *Booking Details:*\n📊 Service: ${bookingData.type}\n${bookingData.tourName ? `🏞️ Tour: ${bookingData.tourName}\n` : bookingData.vehicle ? `🚘 Vehicle: ${bookingData.vehicle}\n` : ''}${bookingData.pickup ? `📍 Pickup: ${bookingData.pickup}\n` : ''}${bookingData.drop ? `🎯 Destination: ${bookingData.drop}\n` : ''}${bookingData.distance ? `📏 Distance: ${bookingData.distance} km\n` : ''}💰 Amount: ₹${bookingData.amount}\n📅 Booking Date: ${new Date().toLocaleDateString('en-IN')}\n\n💳 *Payment Instructions:*\n• 50% advance payment required to confirm booking\n• UPI ID: 7743805933@upi\n• Bank Transfer Details available on request\n\n👨‍✈️ *Driver & Vehicle Details:*\n• Driver Name: Rajesh Kumar\n• Driver Contact: +91 8080062440\n• Vehicle Number: MH01AB1234\n• Vehicle Type: ${bookingData.vehicle || 'Premium AC'}\n\n📞 *Customer Support:*\nFor any queries or assistance:\n• WhatsApp: +91 8080062440\n• Call: +91 8080062440\n• Email: bookings@gaanyogi.in\n\n⚠️ *Important Notes:*\n• Please arrive 15 minutes before scheduled time\n• Keep payment receipt handy\n• Driver will contact you 30 minutes before pickup\n\n🏆 *Thank you for choosing GAANYOGI!*\nWe look forward to serving you with premium travel experiences.\n\n*GAANYOGI Logo:* ${logoUrl}`;
                 
-                showToast(`Booking marked as ${status}`, "success");
-            } catch (error) {
-                console.error("Error updating booking:", error);
-                showToast("Error updating booking", "error");
+                const whatsappUrl = `https://wa.me/91${bookingData.phone.replace(/\D/g, '')}?text=${encodeURIComponent(confirmationMessage)}`;
+                
+                if (confirm(`Confirm booking and send WhatsApp message to ${bookingData.phone}?`)) {
+                    try {
+                        const bookingRef = doc(db, 'bookings', bookingId);
+                        await updateDoc(bookingRef, {
+                            status: status,
+                            updatedAt: serverTimestamp(),
+                            confirmedAt: serverTimestamp()
+                        });
+                        
+                        window.open(whatsappUrl, '_blank');
+                        showToast(`Booking confirmed! WhatsApp sent to ${bookingData.phone}`, "success");
+                        
+                        // Refresh the bookings list
+                        loadAdminBookings();
+                    } catch (error) {
+                        console.error("Error updating booking:", error);
+                        showToast("Error confirming booking", "error");
+                    }
+                }
+            } else {
+                if (confirm(`Mark booking as ${status}?`)) {
+                    try {
+                        const bookingRef = doc(db, 'bookings', bookingId);
+                        await updateDoc(bookingRef, {
+                            status: status,
+                            updatedAt: serverTimestamp()
+                        });
+                        
+                        showToast(`Booking marked as ${status}`, "success");
+                        loadAdminBookings();
+                    } catch (error) {
+                        console.error("Error updating booking:", error);
+                        showToast("Error updating booking", "error");
+                    }
+                }
+            }
+        }
+
+        async function deleteBooking(bookingId, customerName) {
+            if (confirm(`Delete booking for ${customerName}? This action cannot be undone.`)) {
+                try {
+                    const bookingRef = doc(db, 'bookings', bookingId);
+                    await deleteDoc(bookingRef);
+                    
+                    showToast("Booking deleted successfully", "success");
+                    loadAdminBookings();
+                } catch (error) {
+                    console.error("Error deleting booking:", error);
+                    showToast("Error deleting booking", "error");
+                }
+            }
+        }
+
+        function resendConfirmation(bookingData) {
+            const logoUrl = "https://drive.google.com/uc?export=view&id=1I_FHpFkydWhUtaDMSp0BN-XZAH2atzNT";
+            const confirmationMessage = `*✨ GAANYOGI - Booking Confirmed!*\n\n🎉 *Dear ${bookingData.customerName},*\n\nYour booking has been successfully confirmed!\n\n📋 *Booking Details:*\n📊 Service: ${bookingData.type}\n${bookingData.tourName ? `🏞️ Tour: ${bookingData.tourName}\n` : bookingData.vehicle ? `🚘 Vehicle: ${bookingData.vehicle}\n` : ''}${bookingData.pickup ? `📍 Pickup: ${bookingData.pickup}\n` : ''}${bookingData.drop ? `🎯 Destination: ${bookingData.drop}\n` : ''}${bookingData.distance ? `📏 Distance: ${bookingData.distance} km\n` : ''}💰 Amount: ₹${bookingData.amount}\n📅 Booking Date: ${new Date().toLocaleDateString('en-IN')}\n\n💳 *Payment Instructions:*\n• 50% advance payment required to confirm booking\n• UPI ID: 7743805933@upi\n• Bank Transfer Details available on request\n\n👨‍✈️ *Driver & Vehicle Details:*\n• Driver Name: Rajesh Kumar\n• Driver Contact: +91 8080062440\n• Vehicle Number: MH01AB1234\n• Vehicle Type: ${bookingData.vehicle || 'Premium AC'}\n\n📞 *Customer Support:*\nFor any queries or assistance:\n• WhatsApp: +91 8080062440\n• Call: +91 8080062440\n• Email: bookings@gaanyogi.in\n\n⚠️ *Important Notes:*\n• Please arrive 15 minutes before scheduled time\n• Keep payment receipt handy\n• Driver will contact you 30 minutes before pickup\n\n🏆 *Thank you for choosing GAANYOGI!*\nWe look forward to serving you with premium travel experiences.\n\n*GAANYOGI Logo:* ${logoUrl}`;
+            
+            const whatsappUrl = `https://wa.me/91${bookingData.phone.replace(/\D/g, '')}?text=${encodeURIComponent(confirmationMessage)}`;
+            
+            if (confirm(`Resend confirmation to ${bookingData.phone}?`)) {
+                window.open(whatsappUrl, '_blank');
+                showToast(`Confirmation resent to ${bookingData.phone}`, "success");
             }
         }
 
@@ -1194,6 +1476,8 @@
             
             const rows = bookings.map(booking => {
                 const date = booking.createdAt?.toDate ? booking.createdAt.toDate() : new Date();
+                const formattedDate = date.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+                const formattedTime = date.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
                 
                 return `
                 <tr class="border-b border-cream hover:bg-cream/50 transition">
@@ -1203,23 +1487,42 @@
                     </td>
                     <td class="px-6 py-4">
                         <span class="font-medium ${booking.type === 'RIDE' ? 'text-electric' : 'text-sunset'}">${booking.type}</span>
-                        ${booking.tourName ? `<div class="text-xs text-slate">${booking.tourName}</div>` : ''}
+                        ${booking.tourName ? `<div class="text-xs text-slate">${booking.tourName}</div>` : 
+                         booking.vehicle ? `<div class="text-xs text-slate">${booking.vehicle}</div>` : ''}
+                        ${booking.pickup ? `<div class="text-[10px] text-slate">${booking.pickup} → ${booking.drop || ''}</div>` : ''}
                     </td>
                     <td class="px-6 py-4 font-bold text-sunset">₹${booking.amount?.toLocaleString() || '0'}</td>
                     <td class="px-6 py-4">
                         <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase
                             ${booking.status === 'CONFIRMED' || booking.status === 'PAID' ? 'bg-teagreen/20 text-teagreen' : 
                               booking.status === 'CANCELLED' ? 'bg-sunset/20 text-sunset' : 
-                              'bg-electric/20 text-electric'}">
+                              booking.status === 'REQUESTED' ? 'bg-electric/20 text-electric' :
+                              'bg-slate/20 text-slate'}">
                             ${booking.status || 'PENDING'}
                         </span>
                     </td>
-                    <td class="px-6 py-4 text-xs text-slate">${date.toLocaleDateString()}</td>
                     <td class="px-6 py-4">
-                        <button onclick="updateBookingStatus('${booking.id}', 'CONFIRMED')" 
-                                class="text-teagreen hover:text-teagreen/80 text-xs uppercase font-bold mobile-tap">
-                            Confirm
-                        </button>
+                        <div class="text-xs text-slate">${formattedDate}</div>
+                        <div class="text-[10px] text-slate">${formattedTime}</div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="flex flex-wrap gap-2">
+                            ${booking.status !== 'CONFIRMED' ? `
+                            <button onclick="updateBookingStatus('${booking.id}', 'CONFIRMED', ${JSON.stringify(booking).replace(/"/g, '&quot;')})" 
+                                    class="text-teagreen hover:text-teagreen/80 text-xs uppercase font-bold mobile-tap px-3 py-1 bg-teagreen/10 hover:bg-teagreen/20 rounded-lg">
+                                Confirm
+                            </button>
+                            ` : `
+                            <button onclick="resendConfirmation(${JSON.stringify(booking).replace(/"/g, '&quot;')})" 
+                                    class="text-electric hover:text-electric/80 text-xs uppercase font-bold mobile-tap px-3 py-1 bg-electric/10 hover:bg-electric/20 rounded-lg">
+                                Resend
+                            </button>
+                            `}
+                            <button onclick="deleteBooking('${booking.id}', '${booking.customerName}')" 
+                                    class="text-sunset hover:text-sunset/80 text-xs uppercase font-bold mobile-tap px-3 py-1 bg-sunset/10 hover:bg-sunset/20 rounded-lg">
+                                Delete
+                            </button>
+                        </div>
                     </td>
                 </tr>
                 `;
@@ -1323,6 +1626,8 @@
             window.submitRideBooking = submitRideBooking;
             window.handleTourBookingSubmit = handleTourBookingSubmit;
             window.updateBookingStatus = updateBookingStatus;
+            window.deleteBooking = deleteBooking;
+            window.resendConfirmation = resendConfirmation;
             window.handleAdminLogin = handleAdminLogin;
             window.toggleChat = toggleChat;
             window.toggleMobileMenu = toggleMobileMenu;
