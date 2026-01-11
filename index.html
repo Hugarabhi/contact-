@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>GAANYOGI TOURS AND TRAVELS </title>
+    <title>GAANYOGI TOURS AND TRAVELS</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -186,21 +186,20 @@
     <!-- Navigation -->
     <nav class="glass sticky top-0 z-50 shadow-sm animate-fade-in">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2 cursor-pointer" onclick="router.navigate('home')">
-               <div class="flex items-center gap-2 cursor-pointer group" onclick="router.navigate('home')">
-    <!-- Your Logo with Transparent Background -->
-    <div class="relative">
-        <!-- Glow effect on hover -->
-        <div class="absolute -inset-2 bg-gradient-to-br from-electric/20 to-teagreen/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-        
-        <!-- Logo Container -->
-        <div class="w-10 h-10 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 bg-transparent">
-            <img src="gaanyogi_logo.png" 
-                 alt="Gaanyogi Logo" 
-                 class="w-full h-full object-contain hover:scale-110 transition-transform duration-300">
-        </div>
-    </div>
-</div>
+            <div class="flex items-center gap-2 cursor-pointer group" onclick="router.navigate('home')">
+                <!-- Your Logo with Transparent Background -->
+                <div class="relative">
+                    <!-- Glow effect on hover -->
+                    <div class="absolute -inset-2 bg-gradient-to-br from-electric/20 to-teagreen/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                    
+                    <!-- Logo Container -->
+                    <div class="w-10 h-10 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 bg-transparent">
+                        <img src="gaanyogi_logo.png" 
+                             alt="Gaanyogi Logo" 
+                             class="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+                             onerror="this.src='https://via.placeholder.com/40/00a8e8/ffffff?text=G'">
+                    </div>
+                </div>
             </div>
             
             <div class="hidden md:flex gap-6 text-sm font-semibold text-slate">
@@ -256,7 +255,7 @@
                     <i class="fa-brands fa-whatsapp mr-3 text-teagreen"></i>+91 8975029616
                 </p>
                 <p class="text-gray-300 text-sm flex items-center">
-                    <i class="fa-solid fa-envelope mr-3 text-teagreen"></i>AVINASHHUGAR299@GMAIL.COM 
+                    <i class="fa-solid fa-envelope mr-3 text-teagreen"></i>AVINASHHUGAR299@GMAIL.COM
                 </p>
             </div>
             <div>
@@ -269,8 +268,8 @@
             </div>
         </div>
         <div class="text-center text-gray-500 text-[10px] uppercase tracking-widest mt-8 border-t border-white/10 pt-6">
-            &copy; 2026 GAANYOGI tours and travles 
-            <p>build|deploy :avinashhugar299@gmail.com </p>
+            &copy; 2026 GAANYOGI tours and travels <br>
+            build|deploy : avinashhugar299@gmail.com
         </div>
     </footer>
 
@@ -284,7 +283,7 @@
                     </div>
                     <div>
                         <p class="font-bold text-sm font-serif">GAANYOGI HELPS !!</p>
-                        <p class="text-[10px] opacity-90 uppercase">TravelING HELP </p>
+                        <p class="text-[10px] opacity-90 uppercase">TRAVELING HELP</p>
                     </div>
                 </div>
                 <button onclick="toggleChat()" class="hover:bg-white/20 rounded-full w-8 h-8 flex items-center justify-center transition mobile-tap">
@@ -294,7 +293,7 @@
             <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-cream text-sm space-y-3 custom-scrollbar hide-scrollbar">
                 <div class="flex justify-start animate-slide-in">
                     <div class="bg-white p-3 rounded-2xl rounded-tl-none border border-electric/20 max-w-[85%] text-midnight shadow-sm">
-                        Namaste! I am GAANYOGI HELPS, your AI travelling helps !!. How can I assist with your journey today?
+                        Namaste! I am GAANYOGI HELPS, your AI traveling assistant. How can I assist with your journey today?
                     </div>
                 </div>
             </div>
@@ -357,29 +356,29 @@
             }
         };
 
-        // Data
+        // Data - FIXED: Proper image URLs and correct data structure
         const RIDE_OFFERS = [
-            { id: 'off1', from: 'HAIDRA', to: 'AKKALKOT', price: 2999, img: 'akkalkot.png', vehicle: 'ertiga (AC)', duration: '1h 30m' },
-            { id: 'off2', from: 'HAIDRA', to: 'SOLAPUR', price: 3499, img: 'solpaur.png', vehicle: 'ertiga (AC)', duration: '3h 15m' },
-            { id: 'off3', from: 'AKKALKOT', to: 'HAIDRA', price: 3999, img: 'akkalkot.png', vehicle: 'ertiga (ac)', duration: '1h' },
-            { id: 'off4', from: 'AKKALKOT', to: 'PUNE', price: 2499, img: 'pune.png', vehicle: 'ertiga (AC)', duration: '8h 45m' }
+            { id: 'off1', from: 'HAIDRA', to: 'AKKALKOT', price: 2999, img: 'https://images.unsplash.com/photo-1545232979-8bf68ee0523f?q=80&w=400', vehicle: 'Ertiga (AC)', duration: '1h 30m' },
+            { id: 'off2', from: 'HAIDRA', to: 'SOLAPUR', price: 3499, img: 'https://images.unsplash.com/photo-1545232979-8bf68ee0523f?q=80&w-400', vehicle: 'Ertiga (AC)', duration: '3h 15m' },
+            { id: 'off3', from: 'AKKALKOT', to: 'HAIDRA', price: 3999, img: 'https://images.unsplash.com/photo-1545232979-8bf68ee0523f?q=80&w=400', vehicle: 'Ertiga (AC)', duration: '1h' },
+            { id: 'off4', from: 'AKKALKOT', to: 'PUNE', price: 2499, img: 'https://images.unsplash.com/photo-1545232979-8bf68ee0523f?q=80&w=400', vehicle: 'Ertiga (AC)', duration: '8h 45m' }
         ];
 
         const TOURS = [
-            { id: 't001', title: 'srisailam', region: 'ANDRA-PRADESH', duration: '3Days', price: 18500, rating: 4.8, image: 'srisailam.png', desc: 'shree mallikarjun krupa ', highlights: ['darshan', 'hill sectionm ', 'Temples'] },
-            { id: 't002', title: 'mahabaleswar', region: 'Maharashtra', duration: '4 Days', price: 22000, rating: 4.9, image: 'mahabaleswar.png', desc: 'speak with hill section .', highlights: ['hill section', 'view point', 'top hill'] },
-            { id: 't003', title: 'mysore', region: 'Karnataka', duration: '5 Days', price: 15500, rating: 4.7, image: 'mysore.png', desc: 'enjoy the palace and view .', highlights: ['Coffee Tasting', 'Abbey Falls', 'Elephants'] },
-            { id: 't004', title: 'HYDRABAD', region: 'TELANAGANA', duration: '5 Days', price: 28500, rating: 4.9, image: 'hyd.png', desc: 'special for biryani .', highlights: ['special ', 'Ayurvedic Spa', 'Kathakali Show'] },
-            { id: 't004', title: 'HAMPI', region: 'KARANATAKA', duration: '5 Days', price: 28500, rating: 4.9, image: 'hampi.png', desc: 'rocks of heavan ...' .', highlights: ['special ', 'Ayurvedic Spa', 'Kathakali Show'] },
-            { id: 't004', title: 'GOA', region: 'GOA', duration: '5 Days', price: 28500, rating: 4.9, image: 'goa.png', desc: 'youngstures life !!  .', highlights: ['enjoy ', 'Ayurvedic Spa', 'life'] },
-            { id: 't004', title: 'PUNE', region: 'MAHARASTRA', duration: '5 Days', price: 28500, rating: 4.9, image: 'pune.png', desc: 'education / it city...', highlights: ['education ', 'IT PARK', 'saniwar wada'] }
+            { id: 't001', title: 'Srisailam', region: 'ANDHRA-PRADESH', duration: '3 Days', price: 18500, rating: 4.8, image: 'https://images.unsplash.com/photo-1582555490422-9252c7b20536?q=80&w=400', desc: 'Shree Mallikarjun Krupa', highlights: ['Darshan', 'Hill Section', 'Temples'] },
+            { id: 't002', title: 'Mahabaleshwar', region: 'Maharashtra', duration: '4 Days', price: 22000, rating: 4.9, image: 'https://images.unsplash.com/photo-1571406452293-c9183b38148b?q=80&w=400', desc: 'Speak with hill section', highlights: ['Hill Section', 'View Point', 'Top Hill'] },
+            { id: 't003', title: 'Mysore', region: 'Karnataka', duration: '5 Days', price: 15500, rating: 4.7, image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=400', desc: 'Enjoy the palace and view', highlights: ['Coffee Tasting', 'Abbey Falls', 'Elephants'] },
+            { id: 't004', title: 'Hyderabad', region: 'TELANGANA', duration: '5 Days', price: 28500, rating: 4.9, image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=400', desc: 'Special for Biryani', highlights: ['Special Food', 'Historical Sites', 'Shopping'] },
+            { id: 't005', title: 'Hampi', region: 'KARNATAKA', duration: '5 Days', price: 28500, rating: 4.9, image: 'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=400', desc: 'Rocks of heaven', highlights: ['Ancient Ruins', 'Sunset Views', 'Temples'] },
+            { id: 't006', title: 'Goa', region: 'GOA', duration: '5 Days', price: 28500, rating: 4.9, image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=400', desc: 'Youngsters life', highlights: ['Beaches', 'Nightlife', 'Water Sports'] },
+            { id: 't007', title: 'Pune', region: 'MAHARASHTRA', duration: '5 Days', price: 28500, rating: 4.9, image: 'https://images.unsplash.com/photo-1545232979-8bf68ee0523f?q=80&w=400', desc: 'Education / IT City', highlights: ['Education Hub', 'IT Park', 'Sinhagad Fort'] }
         ];
 
         const VEHICLES = [
-            { id: 'v1', name: 'Gaanyogi ertiga ', type: 'Sedan (AC)', seats: 7, rate: 15, img: 'ertiga.png', color: 'electric' },
-            { id: 'v2', name: 'Gaanyogi ertiga ', type: '(NON-AC)', seats: 7, rate: 14, img: 'ertiga.png', color: 'sunset' },
-            { id: 'v3', name: 'Gaanyogi FORCE CRUISER ', type: 'Luxury (NON-AC)', seats: 14, rate: 18, img: 'cruiser.png', color: 'melon' },
-            { id: 'v4', name: 'Gaanyogi FORCE CRUISER ', type: 'Luxury (AC)', seats: 14, rate: 19, img: 'cruiser.png', color: 'melon' }
+            { id: 'v1', name: 'Gaanyogi Ertiga', type: 'Sedan (AC)', seats: 7, rate: 15, img: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/128413/ertiga-exterior-right-front-three-quarter-5.jpeg?isig=0', color: 'electric' },
+            { id: 'v2', name: 'Gaanyogi Ertiga', type: '(NON-AC)', seats: 7, rate: 14, img: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/128413/ertiga-exterior-right-front-three-quarter-5.jpeg?isig=0', color: 'sunset' },
+            { id: 'v3', name: 'Gaanyogi Force Cruiser', type: 'Luxury (NON-AC)', seats: 14, rate: 18, img: 'https://5.imimg.com/data5/SELLER/Default/2022/9/MQ/OA/WO/3622432/force-trax-cruiser-12-str-ac-500x500.jpg', color: 'melon' },
+            { id: 'v4', name: 'Gaanyogi Force Cruiser', type: 'Luxury (AC)', seats: 14, rate: 19, img: 'https://5.imimg.com/data5/SELLER/Default/2022/9/MQ/OA/WO/3622432/force-trax-cruiser-12-str-ac-500x500.jpg', color: 'melon' }
         ];
 
         // Authentication
@@ -399,20 +398,23 @@
             });
         }
 
-        // Router
+        // Router - FIXED: All routes properly defined
         const router = {
+            currentRoute: 'home',
             navigate: (route, params) => {
                 const root = document.getElementById('app-root');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 
                 document.getElementById('mobile-menu').classList.add('hidden');
+                router.currentRoute = route;
                 
-                if(route === 'home') renderHome(root);
-                else if(route === 'tours') renderTours(root);
-                else if(route === 'tour-detail') renderTourDetail(root, params);
-                else if(route === 'booking') renderBooking(root, params);
-                else if(route === 'rides') renderRides(root);
-                else if(route === 'admin') renderAdmin(root);
+                if (route === 'home') renderHome(root);
+                else if (route === 'tours') renderTours(root);
+                else if (route === 'tour-detail') renderTourDetail(root, params);
+                else if (route === 'booking') renderBooking(root, params);
+                else if (route === 'rides') renderRides(root);
+                else if (route === 'admin') renderAdmin(root);
+                else renderHome(root); // Default fallback
             }
         };
 
@@ -457,7 +459,7 @@
                         ${RIDE_OFFERS.map(offer => `
                             <div class="min-w-[280px] bg-white rounded-2xl shadow-lg overflow-hidden border border-electric/20 card-hover flex-shrink-0">
                                 <div class="h-40 overflow-hidden relative">
-                                    <img src="${offer.img}" class="w-full h-full object-cover">
+                                    <img src="${offer.img}" class="w-full h-full object-cover" alt="${offer.from} to ${offer.to}">
                                     <div class="absolute top-3 left-3 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-electric">
                                         <i class="fa-solid fa-clock mr-1"></i>${offer.duration}
                                     </div>
@@ -496,11 +498,11 @@
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            ${TOURS.map(tour => `
+                            ${TOURS.slice(0, 4).map(tour => `
                                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all cursor-pointer border border-electric/10 card-hover" 
                                      onclick="router.navigate('tour-detail', '${tour.id}')">
                                     <div class="h-48 overflow-hidden">
-                                        <img src="${tour.image}" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                                        <img src="${tour.image}" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="${tour.title}">
                                     </div>
                                     <div class="p-6">
                                         <div class="flex justify-between items-start mb-3">
@@ -648,7 +650,7 @@
                                         <div onclick="openBookingModal('${v.id}')" 
                                              class="${bgClass} border ${colorClass} rounded-xl p-4 hover:shadow-lg transition-all cursor-pointer flex items-center gap-4 mobile-tap card-hover">
                                             <div class="w-16 h-12 rounded-lg bg-white overflow-hidden">
-                                                <img src="${v.img}" class="w-full h-full object-cover">
+                                                <img src="${v.img}" class="w-full h-full object-cover" alt="${v.name}">
                                             </div>
                                             <div class="flex-1">
                                                 <h4 class="text-midnight font-bold text-sm">${v.name}</h4>
@@ -677,16 +679,16 @@
                     state.map = L.map('map', { 
                         zoomControl: false,
                         scrollWheelZoom: false
-                    }).setView([19.0760, 72.8777], 10);
+                    }).setView([17.5267, 76.2053], 10);
                     
                     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                         attribution: '&copy; OpenStreetMap'
                     }).addTo(state.map);
                     
-                  L.marker([17.5267, 76.2053])
-                   .addTo(state.map)
-                   .bindPopup('<b>अक्कलकोट</b><br>सोलापूर जिल्हा, महाराष्ट्र')
-                   .openPopup();
+                    L.marker([17.5267, 76.2053])
+                        .addTo(state.map)
+                        .bindPopup('<b>अक्कलकोट</b><br>सोलापूर जिल्हा, महाराष्ट्र')
+                        .openPopup();
                 }
             }, 100);
         }
@@ -700,12 +702,12 @@
                         <p class="text-slate max-w-2xl mx-auto">Discover handpicked luxury tours across India's most breathtaking destinations</p>
                     </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                         ${TOURS.map(t => `
                             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all cursor-pointer border border-electric/10 card-hover" 
                                  onclick="router.navigate('tour-detail', '${t.id}')">
                                 <div class="h-56 md:h-64 overflow-hidden relative">
-                                    <img src="${t.image}" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                                    <img src="${t.image}" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="${t.title}">
                                     <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-electric shadow-sm">
                                         <i class="fa-solid fa-star text-sunset mr-1"></i> ${t.rating}
                                     </div>
@@ -746,7 +748,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <div class="lg:col-span-2 space-y-8">
                             <div class="rounded-2xl overflow-hidden shadow-xl h-[300px] md:h-[400px] relative">
-                                <img src="${tour.image}" class="w-full h-full object-cover">
+                                <img src="${tour.image}" class="w-full h-full object-cover" alt="${tour.title}">
                                 <div class="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent"></div>
                                 <div class="absolute bottom-6 left-6">
                                     <h1 class="font-serif text-3xl md:text-4xl text-white mb-2">${tour.title}</h1>
@@ -849,10 +851,10 @@
                                 </div>
                                 <div class="text-center">
                                     <p class="text-sm font-bold text-midnight mb-3">Scan to Pay via UPI</p>
-                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=7743805933@upi&pn=Gaanyogi&am=${total}&cu=INR&tn=Tour%20Booking%20${tour.title}" 
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=8975029616@upi&pn=Gaanyogi&am=${total}&cu=INR&tn=Tour%20Booking%20${tour.title}" 
                                          class="w-40 h-40 mx-auto rounded-lg mb-3 border border-electric/20"
                                          alt="UPI QR Code">
-                                    <p class="text-xs text-slate">UPI ID: 7743805933@upi</p>
+                                    <p class="text-xs text-slate">UPI ID: 8975029616@upi</p>
                                 </div>
                             </div>
 
@@ -959,7 +961,7 @@
                     
                     <div class="flex items-center gap-4 bg-cream p-4 rounded-xl mb-6 border border-electric/20">
                         <div class="w-20 h-16 rounded-lg overflow-hidden">
-                            <img src="${v.img}" class="w-full h-full object-cover">
+                            <img src="${v.img}" class="w-full h-full object-cover" alt="${v.name}">
                         </div>
                         <div class="flex-1">
                             <h3 class="text-midnight font-bold text-sm">${v.name}</h3>
@@ -1079,7 +1081,7 @@
                 
                 const message = `*New Ride Request - GAANYOGI*\n\nName: ${booking.customerName}\nPhone: ${booking.phone}\nPickup: ${booking.pickup}\nDrop: ${booking.drop}\nVehicle: ${booking.vehicle}\nAmount: ₹${booking.amount}`;
 
-                window.open(`https://wa.me/918080062440?text=${encodeURIComponent(message)}`, '_blank');
+                window.open(`https://wa.me/918975029616?text=${encodeURIComponent(message)}`, '_blank');
                 
                 showToast("Ride request sent successfully!", "success");
                 closeBookingModal();
@@ -1134,7 +1136,7 @@
 
                 const message = `*New Tour Booking - GAANYOGI*\n\nTour: ${tour.title}\nCustomer: ${booking.customerName}\nPhone: ${booking.phone}\nAmount Paid: ₹${booking.amount}`;
 
-                window.open(`https://wa.me/918080062440?text=${encodeURIComponent(message)}`, '_blank');
+                window.open(`https://wa.me/918975029616?text=${encodeURIComponent(message)}`, '_blank');
                 
                 showToast("Booking submitted successfully!", "success");
                 
@@ -1273,11 +1275,13 @@
         }
 
         function toggleChat() {
-            document.getElementById('chat-window').classList.toggle('hidden');
+            const chatWindow = document.getElementById('chat-window');
+            chatWindow.classList.toggle('hidden');
         }
 
         function toggleMobileMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         }
 
         function handleAdminLogin(e) {
@@ -1356,9 +1360,8 @@
                 const menu = document.getElementById('mobile-menu');
                 const menuBtn = document.querySelector('button[onclick="toggleMobileMenu()"]');
                 
-                if (!menu.classList.contains('hidden') && 
-                    !menu.contains(e.target) && 
-                    menuBtn && !menuBtn.contains(e.target)) {
+                if (menu && !menu.classList.contains('hidden') && 
+                    menuBtn && !menu.contains(e.target) && !menuBtn.contains(e.target)) {
                     menu.classList.add('hidden');
                 }
             });
@@ -1389,4 +1392,3 @@
     </script>
 </body>
 </html>
-
