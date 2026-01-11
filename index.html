@@ -187,13 +187,20 @@
     <nav class="glass sticky top-0 z-50 shadow-sm animate-fade-in">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2 cursor-pointer" onclick="router.navigate('home')">
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-electric to-teagreen flex items-center justify-center text-white font-serif text-lg shadow-lg">
-                    G
-                </div>
-                <div>
-                    <h1 class="text-lg font-serif font-bold tracking-widest text-midnight">GAANYOGI</h1>
-                    <p class="text-[8px] text-electric font-bold uppercase tracking-[0.2em]">BOOK FOR SAFETY AND SECURE PICK AND DROP <I>LUXURY|SEFTY|CLEAN|FAST|TRUST</I></p>
-                </div>
+               <div class="flex items-center gap-2 cursor-pointer group" onclick="router.navigate('home')">
+    <!-- Your Logo with Transparent Background -->
+    <div class="relative">
+        <!-- Glow effect on hover -->
+        <div class="absolute -inset-2 bg-gradient-to-br from-electric/20 to-teagreen/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+        
+        <!-- Logo Container -->
+        <div class="w-10 h-10 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 bg-transparent">
+            <img src="gaanyogi_logo.png" 
+                 alt="Gaanyogi Logo" 
+                 class="w-full h-full object-contain hover:scale-110 transition-transform duration-300">
+        </div>
+    </div>
+</div>
             </div>
             
             <div class="hidden md:flex gap-6 text-sm font-semibold text-slate">
@@ -352,17 +359,20 @@
 
         // Data
         const RIDE_OFFERS = [
-            { id: 'off1', from: 'Mumbai Airport', to: 'Lonavala', price: 2999, img: 'https://images.unsplash.com/photo-1596739956461-8f5539d89953?q=80&w=400&auto=format&fit=crop', vehicle: 'Sedan Prime', duration: '2h 30m' },
-            { id: 'off2', from: 'Pune', to: 'Shirdi', price: 3499, img: 'https://images.unsplash.com/photo-1563293887-827c7d1e8476?q=80&w=400&auto=format&fit=crop', vehicle: 'SUV Comfort', duration: '3h 15m' },
-            { id: 'off3', from: 'Bangalore', to: 'Mysore', price: 3999, img: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?q=80&w=400&auto=format&fit=crop', vehicle: 'Innova Crysta', duration: '3h' },
-            { id: 'off4', from: 'Mumbai', to: 'Pune', price: 2499, img: 'https://images.unsplash.com/photo-1566552881560-0be862a7c445?q=80&w=400&auto=format&fit=crop', vehicle: 'Sedan Prime', duration: '2h 45m' }
+            { id: 'off1', from: 'HAIDRA', to: 'AKKALKOT', price: 2999, img: 'akkalkot.png', vehicle: 'ertiga (AC)', duration: '1h 30m' },
+            { id: 'off2', from: 'HAIDRA', to: 'SOLAPUR', price: 3499, img: 'solpaur.png', vehicle: 'ertiga (AC)', duration: '3h 15m' },
+            { id: 'off3', from: 'AKKALKOT', to: 'HAIDRA', price: 3999, img: 'akkalkot.png', vehicle: 'ertiga (ac)', duration: '1h' },
+            { id: 'off4', from: 'AKKALKOT', to: 'PUNE', price: 2499, img: 'pune.png', vehicle: 'ertiga (AC)', duration: '8h 45m' }
         ];
 
         const TOURS = [
-            { id: 't001', title: 'Mystical Hampi', region: 'Karnataka', duration: '3 Days', price: 18500, rating: 4.8, image: 'https://images.unsplash.com/photo-1582555490422-9252c7b20536?q=80&w=400&auto=format&fit=crop', desc: 'Ancient ruins of Vijayanagara empire.', highlights: ['Coracle Ride', 'Sunset Point', 'Cave Temples'] },
-            { id: 't002', title: 'Konkan Bliss', region: 'Maharashtra', duration: '4 Days', price: 22000, rating: 4.9, image: 'https://images.unsplash.com/photo-1571406452293-c9183b38148b?q=80&w=400&auto=format&fit=crop', desc: 'Pristine beaches and scuba diving.', highlights: ['Scuba Diving', 'Fort Visit', 'Beach Bonfire'] },
-            { id: 't003', title: 'Coorg Hills', region: 'Karnataka', duration: '3 Days', price: 15500, rating: 4.7, image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=400&auto=format&fit=crop', desc: 'Coffee plantations and misty hills.', highlights: ['Coffee Tasting', 'Abbey Falls', 'Elephants'] },
-            { id: 't004', title: 'Kerala Backwaters', region: 'Kerala', duration: '5 Days', price: 28500, rating: 4.9, image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=400&auto=format&fit=crop', desc: 'Serene houseboat cruise.', highlights: ['Houseboat Stay', 'Ayurvedic Spa', 'Kathakali Show'] }
+            { id: 't001', title: 'srisailam', region: 'ANDRA-PRADESH', duration: '3Days', price: 18500, rating: 4.8, image: 'srisailam.png', desc: 'shree mallikarjun krupa ', highlights: ['darshan', 'hill sectionm ', 'Temples'] },
+            { id: 't002', title: 'mahabaleswar', region: 'Maharashtra', duration: '4 Days', price: 22000, rating: 4.9, image: 'mahabaleswar.png', desc: 'speak with hill section .', highlights: ['hill section', 'view point', 'top hill'] },
+            { id: 't003', title: 'mysore', region: 'Karnataka', duration: '5 Days', price: 15500, rating: 4.7, image: 'mysore.png', desc: 'enjoy the palace and view .', highlights: ['Coffee Tasting', 'Abbey Falls', 'Elephants'] },
+            { id: 't004', title: 'HYDRABAD', region: 'TELANAGANA', duration: '5 Days', price: 28500, rating: 4.9, image: 'hyd.png', desc: 'special for biryani .', highlights: ['special ', 'Ayurvedic Spa', 'Kathakali Show'] },
+            { id: 't004', title: 'HAMPI', region: 'KARANATAKA', duration: '5 Days', price: 28500, rating: 4.9, image: 'hampi.png', desc: 'rocks of heavan ...' .', highlights: ['special ', 'Ayurvedic Spa', 'Kathakali Show'] },
+            { id: 't004', title: 'GOA', region: 'GOA', duration: '5 Days', price: 28500, rating: 4.9, image: 'goa.png', desc: 'youngstures life !!  .', highlights: ['enjoy ', 'Ayurvedic Spa', 'life'] },
+            { id: 't004', title: 'PUNE', region: 'MAHARASTRA', duration: '5 Days', price: 28500, rating: 4.9, image: 'pune.png', desc: 'education / it city...', highlights: ['education ', 'IT PARK', 'saniwar wada'] }
         ];
 
         const VEHICLES = [
@@ -673,10 +683,10 @@
                         attribution: '&copy; OpenStreetMap'
                     }).addTo(state.map);
                     
-                    L.marker([19.0760, 72.8777])
-                        .addTo(state.map)
-                        .bindPopup('Mumbai Central')
-                        .openPopup();
+                  L.marker([17.5267, 76.2053])
+                   .addTo(state.map)
+                   .bindPopup('<b>अक्कलकोट</b><br>सोलापूर जिल्हा, महाराष्ट्र')
+                   .openPopup();
                 }
             }, 100);
         }
@@ -1379,3 +1389,4 @@
     </script>
 </body>
 </html>
+
